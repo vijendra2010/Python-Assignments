@@ -1,2 +1,1 @@
-# Python-Assignments
-This repository contains all the python assignments.
+num = [ 1, 3, 4, 5, 6, 7 ]
