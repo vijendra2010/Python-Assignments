@@ -113,7 +113,29 @@ Ans: Yes, two tuples can be appended.
 	tup = tuple(input().strip().split())
 	print(len(tup))
 	
-	
-	
+**Q45. What are sets in Python?**
 
+Ans: Sets are built-in data structures that can hold collection of data, sets only holds unique values and can't be indexed and changed.
+
+	set_demo = {1, 3, 4, 5}
+	print(set_demo)
+	
+**Q46. How can you create a set?**
+
+Ans: We can declare a set with {} and put multiple values within the {}.
+
+**Q47. Create a set and add "iNeuron" in your set.**
+
+	st = {1, 2, 3}
+	st.add(4)
+	print(st)
+	
+**Q48. Try to add multiple values using add() function.**
+
+	st = {1, 2, 3}
+	st.add(4)
+	st.add(5)
+	print(st)
+	
+**Q49. How is update() different from add()?**	
   
