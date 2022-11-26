@@ -467,6 +467,20 @@ Access items in key:value pair
 		if sum == n:
 			return True	
 		else:
-			return False
+	  	return False
+			
+  print(amstrong(371))
 
-		print(amstrong(371))
+**Q81. Write a Python program to find the n-th Fibonacci Number.**
+
+	def fibo(n):
+		if n==0:
+			return 0
+		elif n==1 or n==2:
+			return 1
+		else:
+			return fibo(n-1) + fibo(n-2)
+
+	print(fibo(9))
+	
+	
