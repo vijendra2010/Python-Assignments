@@ -248,5 +248,39 @@ Ans: These are the following way to declare the dictionary in python.
 	dict_ex.update({"mobile": "7777777777"})
 
 	for key, value in dict_ex.items():
-    print(key,":",value)
+  	print(key,":",value)
+    
+**Q61. Create a nested dictionary and access all the element in the inner dictionary.**
+
+	data = {
+    'emp1': {'Name': 'Bobby', 'Id': 1, "Age": 20},
+    'emp2': {'Name': 'ojaswi', 'Id': 2, "Age": 22},
+    'emp3': {'Name': 'rohith', 'Id': 3, "Age": 20},
+	}
+ 
+	for key_out, value_out in data.items():
+		for key_in, value_in in value_out.items(): 
+			print(key_in,":", value_in)
+			
+**Q62. What is the use of get() function?**
+
+	data = {
+		"name": "Vijendra",
+		"age": 24,
+		"city": "Ajmer"
+	}
+
+get(keyname, value)	keyname is required, value is optional if there is no key exist as keyname then value will be return as default.
+
+	print(data.get("name"))
+	
+**Q63. What is the use of items() function?**
+
+Ans: The items() function is used to return the key:value pair of the dictionary
+	
+	dict = { "name": "Vijendra", "age": 24 }
+	
+	for key, value in dict.items():
+		print(key, ":", value)
+	
 	
