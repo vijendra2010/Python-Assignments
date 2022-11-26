@@ -210,4 +210,43 @@ Creating dictionary with each item as a pair.
 	
 	pair_dict = ([(1, "str1"), (2, "str2")])
 	
+**Q56. How is dictionary different from all other data structures.**
+
+Ans: In dictionary the data gets stored in key:value pair whereas in the other data types there is not concept of keys. To access the element in dictionary keys are used, whereas other data types use indexing.
+
+**Q57. How can we delare a dictionary in Python?**
+
+Ans: These are the following way to declare the dictionary in python.
+	
+	#Empty dictionary
+	dict1 = {}
+	dict2 = dict()
+	
+	#Dictionary with key:value pair
+	dict1 = { key:value }
+	dict2 = dict({ key: value })
+	
+	#Using the fromkeys() method
+	dict_name = dict.fromkeys(sequence, value)
+
+**Q58. What will the output of the following?**
+**var = {}**
+**print(type(var))**
+
+	#Output
+	<class 'dict'>
+	
+**Q59. How can we add an element in a dictionary?**
+
+	dict_ex = { "name": "Vijendra", "age": 24 }
+	dict_ex.update({"mobile": "7777777777"})
+	print(dict_ex)
+	
+**Q60. Create a dictionary and access all the values in that dictionary.**
+
+	dict_ex = { "name": "Vijendra", "age": 24 }
+	dict_ex.update({"mobile": "7777777777"})
+
+	for key, value in dict_ex.items():
+    print(key,":",value)
 	
