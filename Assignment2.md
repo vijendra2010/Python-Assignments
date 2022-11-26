@@ -185,3 +185,29 @@ Ans: Union() are used to make a single set from two different sets that contains
 	
 	#There can be multiple sets in the union method new_set = original_set.union( set1, set2, ... )
 	
+**Q54. What is intersection() in sets? Explain via code.**
+
+Ans: The intersection() method gives the common elements which are present in all the specified sets.
+
+	a = {1, 2, 3}
+	b = {2, 4, 5, 7}
+	c = {1, 2}
+	d = a.intersection(b, c)
+	
+	#There can be multiple sets in the intersection method new_set = original_set.intersection( set1, set2, ... )
+	
+**Q55. What is dictionary ibn Python?**
+
+Ans: Dictionary is a collection of key value pair, the dictionary contains the key:value separated by comma. The keys in the dictionary are immutable and can't be repeated whereas the values can be repeated.
+
+	dict = { "name":"Vijendra", "age": 24 }
+	
+Dictionary can also be created by using the built-in dict() method.
+
+	using_dict = dict({ "name":"Vijendra", "age": 24 })
+	
+Creating dictionary with each item as a pair.
+	
+	pair_dict = ([(1, "str1"), (2, "str2")])
+	
+	
