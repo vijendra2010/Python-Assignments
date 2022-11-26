@@ -283,4 +283,155 @@ Ans: The items() function is used to return the key:value pair of the dictionary
 	for key, value in dict.items():
 		print(key, ":", value)
 	
+**Q64. What is the use of pop() function?**
+
+Ans: The pop() function is the built-in function in python, it is used to remove the element at the specified index. If the index is not specified then the last element will be removed.
+
+**Q65. What is the use of popitems() function?**
+
+Ans: The popitem() function removes the item that was last inserted in the dictionary.The return value of the function is the item that has been removed.
+
+	data = {
+		"name": "Vijendra",
+		"age": 24,
+		"city": "Jaipur"
+	}
 	
+	result = data.popitem()
+	#Output ("city": "Jaipur")
+	
+**Q66. What is the use of keys() function?**
+
+Ans: The keys() function returns a view object, the view object contains the keys of the dictionary in list.
+	
+	data = {
+		"name": "Vijendra",
+		"age": 24,
+		"city": "Jaipur"
+	}
+	
+	listed_keys = data.keys()
+	print(listed_keys)
+	
+**Q67. What is the use of values() function?**
+
+Ans: The values() function returns a view object, the view object contains the values of the dictionary in list.
+
+	data = {
+		"name": "Vijendra",
+		"age": 24,
+		"city": "Jaipur"
+	}
+	
+	listed_values = data.values()
+	print(listed_values)	
+	
+**Q68. What are loops in Python?**	
+
+Ans: Loops are the way we can iterate over the iterables in python.
+
+**Q69. How many type of loop are there in Python?**
+
+Ans: There are two types of loops while loop and for loop.
+
+**Q70. What is the difference between for and while loops?**
+
+Ans: for loops are used when the number of iterations are fixed, whereas the while loop is used when the number of iterations are not fixed and the loop continue to execute untill the specified condition is met.
+
+**Q71. What is the use of continue statement?**
+
+Ans: The continue keyword is used to end the current iteration in a for loop (or a while loop), and continues to the next iteration.
+
+**Q72. What is the use of break statement?**
+
+Ans: It is used to terminate the loop when some condition is met.
+
+**Q73. What is the use of pass statement?**
+
+Ans: The pass statement is null statement but it is different from comments. The pass can be place where the user is not sure what code is to be placed, the pass is placed where the empty code is not allowed.
+
+**Q74. What is the use of range() function?**
+
+Ans: The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.
+
+**Q75. How can you loop over a dictionary?**
+
+Ans: There are multiple ways to iterate over the dictionary.
+
+Using keys()
+	
+	data = {
+		"name": "Vijendra",
+		"age": 24,
+		"city": "Jaipur"
+	}
+	data_keys = data.keys()
+	
+Using values()
+
+	data = {
+		"name": "Vijendra",
+		"age": 24,
+		"city": "Jaipur"
+	}
+	data_keys = data.values()
+	
+Iterate over the all keys and value.
+
+	data = {
+		"name": "Vijendra",
+		"age": 24,
+		"city": "Jaipur"
+	}
+	for key, value in data.items():
+		print(key, ":", value)
+		
+Get key and value without using items()
+
+	data = {
+		"name": "Vijendra",
+		"age": 24,
+		"city": "Jaipur"
+	}
+	for item in data:
+		print(item, ":", data[item])
+		
+Access items in key:value pair
+
+	data = {
+		"name": "Vijendra",
+		"age": 24,
+		"city": "Jaipur"
+	}
+	data_keys = data.items()
+	
+## Coding Problems
+
+**Q76. Write a Python program to find the factorial of a given number.**
+
+	def fact(n):
+		if ( n == 0 | n == 1):
+			return 1
+		else:
+			return n * fact(n-1)
+
+	result = fact(5)
+	print(result)
+	
+**Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (PRT)/100**
+
+	def s_interest(p, r, t):
+		si = (p*r*t)/100
+		return si
+
+	result = s_interest(100, 5, 2)
+	print(result)
+	
+**Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.**
+
+	def c_interest(p, r, t):
+		ci = p*(1 + r/100)**t
+		return ci
+		
+	result = c_interest(100, 5, 2)
+	print(result)
