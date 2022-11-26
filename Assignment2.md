@@ -435,3 +435,38 @@ Access items in key:value pair
 		
 	result = c_interest(100, 5, 2)
 	print(result)
+
+**Q79. Write a Python program to check if a number is prime or not.**
+
+	def is_prime(n):
+		if n>1:
+			for i in range(2, n):
+				if (n%i==0):
+					return False
+			else:
+				return True
+		else:
+			return False
+
+	result = is_prime(8)
+	print(result)	
+	
+**Q80. Write a Python program to check Armstrong Number.**
+
+	def cube(n):
+		return n**3
+
+	def amstrong(n):
+		sum = 0
+		temp = n
+		while(temp>0):
+			rem = temp%10
+			sum = sum + cube(rem)
+			temp = temp//10
+
+		if sum == n:
+			return True	
+		else:
+			return False
+
+		print(amstrong(371))
