@@ -138,4 +138,50 @@ Ans: We can declare a set with {} and put multiple values within the {}.
 	print(st)
 	
 **Q49. How is update() different from add()?**	
+
+Ans: The add() method is used to add a single element to the set, whereas the update() mehtod is used to add sequence of elements or any other iterable to the existing set.
+	
+	#Add ex
+	st = {1, 3, 4}
+	st.add(5)
+	print(st)
+	
+	#Update ex
+	st = {1, 3, 4}
+	temp = [2, 5]
+	st.update(temp)
+	
+**Q50. What is clear() in sets?**	
+
+Ans: clear() method is used to remove all the elements from the set.
+	
+**Q51. What is frozen set?**	
+
+Ans: frozenset() method creates a immutable set of any iterable, it is a built-in method in python and as it is a set it only contains unique elements.
+
+	#On tuples
+	tuple_ex = (1, 3)
+	frozen_tuple_set = frozenset(tuple_ex)
+	
+	#On List
+	list_ex = [1, 3, 4]
+	frozen_list_set = frozenset(list_ex)
+	
+	#On Dictionary(keys will be part of the resultant set)
+	dict_ex = { "name":"Vijendra", "age": 24 }
+	frozen_dict_set = frozenset(dict_ex)
+	
+**Q52. How is frozen set different from set?**	
+
+Ans: Frozen sets are immutable and can't be modified, whereas the normal sets are mutable they can be modified at any point of time.
+
+**Q53. What is union() in sets? Explain via code.**
   
+Ans: Union() are used to make a single set from two different sets that contains all the elements of both the sets.
+
+	a = {1,2}
+	b = {2,3}
+	c = a.union(b)
+	
+	#There can be multiple sets in the union method new_set = original_set.union( set1, set2, ... )
+	
