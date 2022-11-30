@@ -483,4 +483,27 @@ Access items in key:value pair
 
 	print(fibo(9))
 	
+**Q82. Write a Python program to interchange the first and last element in a list.**
+
+	list_ex = [ 1, 2, 3, 4, 5, 6 ]
+	print("Before swap: ",list_ex)
+	list_ex[0], list_ex[-1] = list_ex[-1], list_ex[0]
+	print("After swap: ",list_ex)
 	
+**Q83. Write a Python program to swap two elements in a list.**
+
+	list_ex = [ 1, 2, 3, 4, 5, 6 ]
+	print("Before swap: ",list_ex)
+	list_ex[0], list_ex[-1] = list_ex[-1], list_ex[0]
+	print("After swap: ",list_ex)
+		
+**Q84. Write a Python program to find N largest element from a list.**
+
+	nth_largest_input = int(input("Enter the nth index: "))
+	list_ex = [ 1, 4, 3, 5, 6 ]
+	list_ex.sort()
+
+	if (nth_largest_input < 0 or nth_largest_input > len(list_ex)):
+		print("Please enter a valid index")
+	else:
+		print("The ",nth_largest_input,"th ","largest element is: ",list_ex[-nth_largest_input])	
