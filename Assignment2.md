@@ -507,3 +507,23 @@ Access items in key:value pair
 		print("Please enter a valid index")
 	else:
 		print("The ",nth_largest_input,"th ","largest element is: ",list_ex[-nth_largest_input])	
+
+**Q85. Write a Python program to find cumulative sum of a list.**
+
+	test_list = [ 1,2,3,4,5,6,7,8,9,10 ]
+	sum = 0
+
+	for item in test_list:
+		sum += item
+
+	print("Cumulative sum: ",sum)   
+	
+**Q86. Write a Python program to check if a string is palindrome or not.**
+
+	test_str = input("Enter the string: ")
+	rev_str = test_str[::-1]
+
+	if test_str == rev_str:
+    print(rev_str, " is palindrone")
+	else: 
+    print(rev_str, " is not palindrone")    
