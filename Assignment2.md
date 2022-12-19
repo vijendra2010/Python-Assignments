@@ -539,8 +539,9 @@ Access items in key:value pair
 **Q88. Write a Python program to check if a substring is present in a given string.**
 
 There can be multiple ways to check if the string contains the substring.
-1. Using **in** operator
-
+	
+Using **in** operator
+	
 	sub_str = "The"
 	test_str = "Hello! There"
 	
@@ -549,8 +550,8 @@ There can be multiple ways to check if the string contains the substring.
 	else:
 		print("No")
 		
-2. Using **split()** function.
-
+Using **split()** function.
+	
 	sub_str = "There"
 	test_str = "Hello! There"
 	s = test_str.split(' ')
@@ -560,8 +561,8 @@ There can be multiple ways to check if the string contains the substring.
 	else:
 		print("No")
 		
-3. Using **find()** function.
-
+Using **find()** function.
+	
 	#The find function will return -1 if the substr is not present 
 	#else it returns the starting index of the substr.
 
