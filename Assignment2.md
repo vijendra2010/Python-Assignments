@@ -572,3 +572,69 @@ Using **find()** function.
 	res = test_str.find(sub_str)
 	print(res)
 		
+Using **__contains__** magic class
+
+	test_str = "Hello! There"
+	sub_str = "Th"
+
+	if test_str.__contains__(sub_str):
+		print("Yes")
+	else:
+		print("No")
+		
+**Q89. Write a Python program to find words which are greater than given length k.**
+
+	given_len = int(input("Enter the length k: "))
+	strr = "a aa aaa aaaa aaaaa aaaaaa"
+	for ele in strr.split(' '):
+		if len(ele) > given_len:
+			print(ele)
+			
+**Q90. Write a Python program to extract unquire dictionary values.**
+
+	test_dict = {'a': [5, 6, 7, 8], 'b': [10, 11, 7, 5], 'c': [6, 12, 10, 8], 'd': [1, 2, 5]}
+	new_set = list(sorted({ele for val in test_dict.values() for ele in val}))
+	print(new_set)
+	
+**Q91. Write a Python program to merge two dictionary.**
+
+There are three ways to merge two dictionaries
+
+Using | operator (in python 3.9 on wards)
+	
+	dict1 = { 'a': 1, 'b': 2 }
+	dict2 = { 'c': 3, 'd': 4 }
+	print(dict1 | dict2)
+	
+Using ** operator 
+	
+	dict1 = { 'a': 1, 'b': 2 }
+	dict2 = { 'c': 3, 'd': 4 }
+	print({ **dict1, **dict2 })
+	
+Using copy() and update()
+
+	dict1 = { 'a': 1, 'b': 2 }
+	dict2 = { 'c': 3, 'd': 4 }
+	dict3 = dict2.copy()
+	dict3.update(dict1)
+	print(dict3)
+	
+**Q92. Write a Python program to convert a list of tuples into dictionary.**
+**Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}**
+
+	list_of_tuple = [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+	res = dict(list_of_tuple)
+	print(res)
+
+**Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.**
+**Input: list = [9, 5, 6]
+Output: [(9, 729), (5, 125), (6, 216)]**
+
+	demo_list = [9, 5, 6]
+	list_of_tuple_and_cube = list((ele, ele**3) for ele in demo_list)
+	print(list_of_tuple_and_cube)
+	
+	
+
