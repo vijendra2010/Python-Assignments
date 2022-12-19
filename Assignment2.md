@@ -524,6 +524,50 @@ Access items in key:value pair
 	rev_str = test_str[::-1]
 
 	if test_str == rev_str:
-    print(rev_str, " is palindrone")
+		print(rev_str, " is palindrone")
 	else: 
-    print(rev_str, " is not palindrone")    
+		print(rev_str, " is not palindrone")    
+
+**Q87. Write a Python program to remove i'th element from a string.**
+
+	index = int(input("Enter the index you want remove from string: "))
+	test_str = "Hello! world"
+
+	new_str = test_str[:index] + test_str[index+1:] 
+	print(new_str)
+	
+**Q88. Write a Python program to check if a substring is present in a given string.**
+
+There can be multiple ways to check if the string contains the substring.
+1. Using **in** operator
+
+	sub_str = "The"
+	test_str = "Hello! There"
+	
+	if sub_str in test_str:
+		print("Yes")
+	else:
+		print("No")
+		
+2. Using **split()** function.
+
+	sub_str = "There"
+	test_str = "Hello! There"
+	s = test_str.split(' ')
+	
+	if sub_str in s:
+		print("Yes")
+	else:
+		print("No")
+		
+3. Using **find()** function.
+
+	#The find function will return -1 if the substr is not present 
+	#else it returns the starting index of the substr.
+
+	sub_str = "There"
+	test_str = "Hello! There"
+
+	res = test_str.find(sub_str)
+	print(res)
+		
