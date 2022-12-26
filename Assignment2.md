@@ -636,5 +636,31 @@ Output: [(9, 729), (5, 125), (6, 216)]**
 	list_of_tuple_and_cube = list((ele, ele**3) for ele in demo_list)
 	print(list_of_tuple_and_cube)
 	
+**Q94. Write a Python program to get all combinations of 2 tuples.**
+**Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
+Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]**
+
+	t1 = (7, 2)
+	t2 = (7, 8)
+	res = [ (a, b) for a in t1 for b in t2 ]
+	res = res + [ (a, b) for b in t1 for a in t1 ]
+	print(res)
+	
+**Q95. Write a Python program to sort a list of tuples by second item.**
+**Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
+Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]**
+
+	Input = [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
+	sortedInput = sorted(Input, key=lambda t: t[1])
+	print(sortedInput)
+	
+**Q96. Write a python program to print below pattern.**
+
+	* 
+	* * 
+	* * * 
+	* * * * 
+	* * * * * 
+	
 	
 
