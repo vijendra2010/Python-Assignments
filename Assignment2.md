@@ -662,5 +662,72 @@ Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]**
 	* * * * 
 	* * * * * 
 	
+	for i in range(1, 6):
+    print("*"*i)
+		
+**Q97. Write a python program to print below pattern.**
+
+	    *
+	   **
+	  ***
+	 ****
+	*****
+	
+	for i in range(1, 6):
+    print(" "*(6-i), "*"*i)
+	
+**Q98. Write a python program to print below pattern.**
+
+	    * 
+	   * * 
+	  * * * 
+	 * * * * 
+	* * * * *
+	
+	row = 5
+	space = row - 1
+
+	for i in range(0, row):
+		for j in range(0, space):
+			print(end=" ")
+		space = space-1
+		for j in range(0, i+1):
+			print("* ", end="")
+    print("\r")
+	
+**Q99. Write a python program to print below pattern.**
+
+	1 
+	1 2 
+	1 2 3 
+	1 2 3 4 
+	1 2 3 4 5
+	
+	n = 5
+	for i in range(0, n):
+		num = 1
+		for j in range(0, i+1):
+			print(num, end=" ")
+			num = num + 1
+		print("\r")
+		
+**Q100. Write a python program to print below pattern.**
+
+	A 
+	B B 
+	C C C 
+	D D D D 
+	E E E E E
+	
+	num = 65
+	n = 5
+	for i in range(0, n):
+		for j in range(0, i+1):
+			ch = chr(num)
+			print(ch, end=" ")
+		num = num + 1
+		print("\r")
+		
+	
 	
 
