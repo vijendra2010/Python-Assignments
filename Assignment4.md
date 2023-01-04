@@ -11,6 +11,27 @@
 	
 **Q3. How do you select rows from a Pandas DataFrame based on a condition?**
 
+	records = {
+    'SNo' : [1, 2, 3, 4],
+    'Name' : ['vijendra', 'ved', 'raj', 'mahi'],
+    'Age' : [25, 23, 26, 26],
+    'Project' : ['charm', 'charm', 'procorn', 'docitt'],
+	}
+	df = pd.DataFrame(records, columns = ['SNo', 'Name', 'Age', 'Project'])
+	df_with_condition = df[df['Age'] < 25]
+	print(df_with_condition)
+	
+**Q4. How do you rename columns in a Pandas DataFrame?**
+
+Using rename() function.
+	
+	user_data = {
+		'name': ['vijendra', 'ved', 'raj', 'mahi'],
+		'age': [25, 23, 26, 26],
+	}
+	df = pd.DataFrame(user_data)
+	df.rename(columns = { 'name':'Name', 'age':'Age' }, inplace=True)
+	print(df)
 	
 
 	
