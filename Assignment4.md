@@ -33,5 +33,33 @@ Using rename() function.
 	df.rename(columns = { 'name':'Name', 'age':'Age' }, inplace=True)
 	print(df)
 	
+**Q5. How do you drop columns in a Pandas DataFrame?**
 
+There can be multiple ways to drop a column.
+
+Drop a single column using drop() function.
 	
+	user_data = {
+    'name': ['vijendra', 'ved', 'raj', 'mahi'],
+    'age': [25, 23, 26, 26],
+	}	
+	df = pd.DataFrame(user_data)
+	df.drop('Age', axis=1)
+	
+Drop multiple columns using drop() function.
+
+	user_data = {
+    'name': ['vijendra', 'ved', 'raj', 'mahi'],
+    'age': [25, 23, 26, 26],
+	}	
+	df = pd.DataFrame(user_data)
+	df.drop(['Age', 'Name'], axis=1)
+	
+Drop columns based on index values.
+
+	user_data = {
+    'name': ['vijendra', 'ved', 'raj', 'mahi'],
+    'age': [25, 23, 26, 26],
+	}	
+	df = pd.DataFrame(user_data)
+	df.drop(df.columns[[0, 1]], axis=1, inplace=True)
