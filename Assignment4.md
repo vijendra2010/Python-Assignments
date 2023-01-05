@@ -63,3 +63,55 @@ Drop columns based on index values.
 	}	
 	df = pd.DataFrame(user_data)
 	df.drop(df.columns[[0, 1]], axis=1, inplace=True)
+	
+**Q6. How do you find the unique values in a column of a Pandas DataFrame?**
+
+	user_data = {
+    'name': ['vijendra', 'ved', 'raj', 'mahi'],
+    'age': [25, 23, 26, 26],
+	}	
+	df = pd.DataFrame(user_data)
+	df['Age'].unique()
+	
+**Q7. How do you find the number of missing values in each column of a Pandas DataFrame?**
+
+	import numpy as np
+	user_data = {
+    'name': ['vijendra', 'ved', 'raj', np.nan],
+    'age': [25, np.nan, np.nan, 26],
+	}
+	df = pd.DataFrame(user_data)
+	df.isna().sum()
+	
+**Q8. How do you fill missing values in a Pandas DataFrame with a specific value?**
+
+	import numpy as np
+	user_data = {
+    'name': ['vijendra', 'ved', 'raj', np.nan],
+    'age': [25, np.nan, np.nan, 26],
+	}
+	df = pd.DataFrame(user_data)
+	df.fillna(0)
+	
+**Q9. How do you concatenate two Pandas DataFrames?**	
+
+	obj1 = {
+    "a": [1, 2, 3],
+    "b": [5, 7, 8],
+    "c": [3, np.nan, np.nan]
+	}
+	df1 = pd.DataFrame(obj1)
+	df1
+	
+	obj2 = {
+    "a": ["q"],
+    "b": ["p"],
+    "c": ["a"],
+	}
+	df2 = pd.DataFrame(obj2)
+	df2
+	
+	frames = [ df1, df2 ]
+	result_df = pd.concat(frames)
+	result_df
+	
