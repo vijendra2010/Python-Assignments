@@ -115,3 +115,30 @@ Drop columns based on index values.
 	result_df = pd.concat(frames)
 	result_df
 	
+**Q10. How do you merge two Pandas DataFrames on a specific column?**
+
+	df1 = pd.DataFrame({
+    'Name': ['Vijendra', 'Ved', 'Raj'],
+    'Marks': [23, 24, 21],
+	})
+	df2 = pd.DataFrame({
+    'Name': ['Vijendra', 'Ved', 'Mahi'],
+    'Age': [24, 22, 34],
+    'Address': ['SN', 'AP', 'SN'],	
+	})
+	df1.merge(df2[['Name', 'Age', 'Address']])
+	
+**Q11. How do you group data in a Pandas DataFrame by a specific column and apply an aggregation function?**
+
+	grp_df = pd.DataFrame({
+    'Name': ['a', 'b', 'c', 'a', 'd', 'c'],
+    'Roll': [1, 3, 2, 5, 6, 3]
+	})
+	grp_df.groupby(['Name'])
+	grp_df.agg(['sum'])
+	
+**Q12. How do you pivot a Pandas DataFrame?**
+
+	
+	
+	
