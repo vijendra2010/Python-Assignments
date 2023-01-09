@@ -259,6 +259,92 @@ Correlation is used to summarize the strength and direction of the linear associ
 	})
 	print(df['Sales'])
 	
+**Q21. How do you select specific rows in a DataFrame using their indexes?**
+
+We can get a specific row using DataFrame.iloc[row_index].
+
+	df = pd.DataFrame({
+    'states': ['Gujarat', 'Rajasthan', 'Panjab', 'Delhi'],
+    'Sales': [1000, 4000, 2300, 8900],
+    'Amount': [120000, 34000, 67890, 98210]
+	})
+	df.iloc[0]
+	
+**Q22. How do you sort a DataFrame by a specific column?**
+
+We can sort the DF using DataFrame.sort_values() function(By default sorting is ASC)
+
+	d_f = pd.DataFrame({
+    'A': [1, 4, 2, 5, 3],
+    'B': ['a', 'b', 'c', 'd', 'e'],
+    'C': [1.1, '1.0', '1.3', 2, 5]})
+	d_f.sort_values('A')
+	
+Changing the order of sorting.
+
+	d_f.sort_values(by="A", ascending=False)
+
+Specifying the algorithm type.
+
+	d_f.sort_values(by="A", ascending=False, kind="mergesort")
+	
+Sorting with multiple columns.
+
+	d_f.sort_values(by=["A", "B"])[["A", "B"]]
+	
+**Q23. How do you create a new column in a DataFrame based on the values of another column?**
+
+	df = pd.DataFrame({
+    'states': ['Gujarat', 'Rajasthan', 'Panjab', 'Delhi'],
+    'Sales': [1000, 4000, 2300, 8900],
+    'Amount': [120000, 34000, 67890, 98210]
+	})
+	df['new_col'] = df['Sales'] + df['Amount']
+	
+**Q24. How do you remove duplicates from a DataFrame?**
+
+When the complete row is duplicated.
+
+	df = pd.DataFrame({
+    'states': ['Gujarat', 'Rajasthan', 'Panjab', 'Gujarat'],
+    'Sales': [1000, 4000, 1000, 1000],
+    'Amount': [120000, 34000, 67890, 120000]
+	})
+	df.drop_duplicates()
+	
+To remove duplicates present in specific column.
+
+	df = pd.DataFrame({
+    'states': ['Gujarat', 'Rajasthan', 'Panjab', 'Gujarat'],
+    'Sales': [1000, 4000, 1000, 1050],
+    'Amount': [120000, 34000, 67890, 13450]
+	})
+	df.drop_duplicates(subset='states', keep=False, inplace=True)
+	df
+	
+**Q25. What is the difference between .loc and .iloc in Pandas?**
+
+loc() and iloc() are used in slicing data from the Pandas DataFrame.
+
+The loc() function is label based data selecting method which means that we have to pass the name of the row or column which we want to select. This method includes the last element of the range passed in it, unlike iloc(). loc() can accept the boolean data unlike iloc().
+
+**Ex 1.** Selecting data according to some conditions.
+**display(df.loc[condition])**
+
+**Ex 2.** Selecting a range of rows from the DataFrame.
+**display(df.loc[2: 5])**
+
+**Ex 3.** Updating the value of any column.
+**df.loc[ (condition), ['Col_name']] = value**
+
+The iloc() function is an indexed-based selecting method which means that we have to pass an integer index in the method to select a specific row/column. This method does not include the last element of the range passed in it unlike loc(). iloc() does not accept the boolean data unlike loc().
+
+**Ex 1.** Selecting rows using integer indices.
+**display(df.iloc[[0, 2, 4, 7]])**
+
+**Ex 2.** Selecting a range of columns and rows simultaneously
+**display(df.iloc[1: 5, 2: 5])**
+
 	
 	
 	
