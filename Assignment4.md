@@ -210,4 +210,55 @@ When deep=True (default), a new object will be created with a copy of the callin
 	
 	shallow = s.copy(deep=False)
 	
+**Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?**
+
+	df = pd.DataFrame({
+    'states': ['Gujarat', 'Rajasthan', 'Panjab', 'Delhi'],
+    'Sales': [1000, 4000, 2300, 8900],
+    'Amount': [120000, 34000, 67890, 98210]
+	})
+	df.loc[ (df['Sales']>1000) & (df['Amount']<100000) ]
+	
+**Q17. How do you calculate the mean of a column in a Pandas DataFrame?**
+
+	df = pd.DataFrame({
+    'states': ['Gujarat', 'Rajasthan', 'Panjab', 'Delhi'],
+    'Sales': [1000, 4000, 2300, 8900],
+    'Amount': [120000, 34000, 67890, 98210]
+	})
+	df['Sales'].mean()
+	
+**Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?**
+
+Standard deviation tells about how the values in the dataset are spread. They also tells how far the values in the dataset are from the arithmetic mean of the columns in the dataset.
+
+	df = pd.DataFrame({
+    'states': ['Gujarat', 'Rajasthan', 'Panjab', 'Delhi'],
+    'Sales': [1000, 4000, 2300, 8900],
+    'Amount': [120000, 34000, 67890, 98210]
+	})
+	df['Sales'].std()
+	
+**Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?**
+
+Correlation is used to summarize the strength and direction of the linear association between two quantitative variables. It is denoted by r and values between -1 and +1. A positive value for r indicates a positive association, and a negative value for r indicates a negative association.
+
+	df = pd.DataFrame({
+    'states': ['Gujarat', 'Rajasthan', 'Panjab', 'Delhi'],
+    'Sales': [1000, 4000, 2300, 8900],
+    'Amount': [120000, 34000, 67890, 98210]
+	})
+	df['Sales'].corr(df['Amount'])
+	
+**Q20. How do you select specific columns in a DataFrame using their labels?**
+
+	df = pd.DataFrame({
+    'states': ['Gujarat', 'Rajasthan', 'Panjab', 'Delhi'],
+    'Sales': [1000, 4000, 2300, 8900],
+    'Amount': [120000, 34000, 67890, 98210]
+	})
+	print(df['Sales'])
+	
+	
+	
 	
