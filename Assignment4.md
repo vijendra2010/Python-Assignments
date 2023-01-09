@@ -186,7 +186,7 @@ We can sort the DF using DataFrame.sort_values() function(By default sorting is 
 	
 Changing the order of sorting.
 
-`d_f.sort_values(by="A", ascending=False)
+	d_f.sort_values(by="A", ascending=False)
 
 Specifying the algorithm type.
 
@@ -195,3 +195,19 @@ Specifying the algorithm type.
 Sorting with multiple columns.
 
 	d_f.sort_values(by=["A", "B"])[["A", "B"]]
+	
+**Q15. How do you create a copy of a Pandas DataFrame?**
+
+Copies can be created using DataFrame.copy(deep=True).
+
+When deep=True (default), a new object will be created with a copy of the calling object’s data and indices. Modifications to the data or indices of the copy will not be reflected in the original object 
+
+	s = pd.DataFrame({
+    'A': [2, 3]
+	})
+	deep = s.copy()
+	deep
+	
+	shallow = s.copy(deep=False)
+	
+	
