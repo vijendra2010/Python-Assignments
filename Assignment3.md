@@ -125,6 +125,15 @@ Ans: Inheritance and polymorphism are fundamental concepts of object oriented pr
 
 **Q18. Describe three applications for exception processing.**
 
-Ans: 
+Ans: Exception handling is the process of responding to unwanted or unexpected events when a computer program runs. Exception handling deals with these events to avoid the program or system crashing, and without this process, exceptions would disrupt the normal operation of a program.
+
+**Q19. What happens if you don't do something extra to treat an exception?**
+
+Ans: If we don't handle the ecveptions then the program or system gets crashed in case of any exception occurance.
+
+**Q20. What are your options for recovering from an exception in your script?**
+
+Ans: If there is any suspicious code in the script that may cause any exception then we put that code inside try-except block or we can also use the variants of try-except like try-except-else or try-finally.
+
 
 	
