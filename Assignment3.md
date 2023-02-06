@@ -115,8 +115,16 @@ If we try to add two objects of any type then the compiler will show us error as
 
 Ans: When ever we try to perform some sort of operations with the operators which are not their default operation and when we provide the function that can be invoked to perform that operation then we can say we are allowing the operator overloading to our class.
 
+**Q16. What is the most popular form of operator overloading?**
 
+Ans: Most populer operator overloading is for addition(+) which is use for performing addition on numbers and is used to concate string values.
 
+**Q17. What are the two most important concepts to grasp in order to comprehend Python OOP code?**
 
+Ans: Inheritance and polymorphism are fundamental concepts of object oriented programming. These concepts help us to create code that can be extended and easily maintainable.Inheritance is a great way to eliminate unnecessary repetitive code. A child class can inherit from the parent class partially or entirely. Python is quite flexible with regards to inheritance. We can add new attributes and methods as well as modify the existing ones. Polymorphism contributes to Python’s flexibility as well. An object with a particular type can be used as if it belonged to a different type.
+
+**Q18. Describe three applications for exception processing.**
+
+Ans: 
 
 	
