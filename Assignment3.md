@@ -210,7 +210,39 @@ Ans: The raise keyword is used to raise an exception. You can define what kind o
 	if not type(x) is int:
   	raise TypeError("Only integers are allowed")
 		
+**Q26. What does the assert statement do, and what other statement is it like?**
+
+Ans: The assert keyword is used when debugging code. The assert keyword lets you test if a condition in your code returns True, if not, the program will raise an AssertionError.
+
+	x = "hello"
+	#if condition returns False, AssertionError is raised:
+	assert x == "goodbye", "x should be 'hello'"
+	
+**Q27. What is the purpose of the with/as argument, and what other statement is it like?**
+
+Ans: **with** statement is used in exception handling to make the code cleaner and much more readable. It simplifies the management of common resources like file streams. Example of file handling 
+
+	# Without using with statement and without try-catch
+	file = open('file_path', 'w')
+	file.write('hello world !')
+	file.close()
 		
+The above code is not able to handle any exception and the code is also not much readable and compact. An exception during the file.write() call in the above code can prevent the file from closing properly which may introduce several bugs in the code.
+
+	# Without using with statement with try catch
+	file = open('file_path', 'w')
+	try:
+  	file.write('hello world')
+	finally:
+  	file.close()
+		
+The above code can handle the exception but it is not that compact
+
+	# using with statement
+	with open('file_path', 'w') as file:
+  	file.write('hello world !')
+		
+The above code is more compact and redable and also there is no need of the file.close() here as the with itself ensures proper acquisition and release of resources.		
 
 
 		
