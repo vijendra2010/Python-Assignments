@@ -303,6 +303,52 @@ Ans: It is a mechanism that allows you to create a hierarchy of classes that sha
 
 Single inheritance: When a child class inherits from only one parent class, it is called single inheritance. We saw an example above. Multiple inheritances: When a child class inherits from multiple parent classes, it is called multiple inheritances. Multilevel inheritance: When we have a child and grandchild relationship. Hierarchical inheritance More than one derived class are created from a single base. Hybrid inheritance: This form combines more than one form of inheritance. Basically, it is a blend of more than one type of inheritance.
 	
+**Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of class C, which version gets invoked?**
+
+Ans: If both classes A and B have their own versions of the method func(), and class C inherits from both classes A and B using the syntax class C(A,B), then the version of func() that gets invoked depends on the method resolution order (MRO) of class C.
+
+The MRO is the order in which Python looks for methods in a class hierarchy, and it is determined by the C3 linearization algorithm. When we call a method on an instance of class C, Python first looks for the method in class C itself, and if it's not found there, it looks in class A, then in class B, and so on, following the MRO.
+
+The MRO is computed when the class is defined, and it takes into account the order of the base classes specified in the inheritance list. By default, the MRO is computed using a depth-first left-to-right search of the inheritance tree.
+
+So in the case of class C(A,B), if both classes A and B have their own versions of the method func(), and the MRO of class C is such that A appears before B, then the version of func() from class A will be invoked when we call func() on an object of class C. Conversely, if the MRO is such that B appears before A, then the version of func() from class B will be invoked.
+
+**Q33. Which methods/functions do we use to determine the type of instance and inheritance?**
+
+Ans: In Python, we can use the built-in functions type() and isinstance() to determine the type of an instance and to check if an instance is an instance of a particular class or its subclass, respectively. We can also use the issubclass() function to check if a class is a subclass of another class.
+
+**Q34.Explain the use of the 'nonlocal' keyword in Python.**
+
+Ans: In Python, the nonlocal keyword is used to declare a variable in a nested function that is not a local variable of that function or a global variable. This allows the nested function to access and modify the value of the variable in the outer function's scope.
+
+	def outer():
+    x = 1
+    def inner():
+        nonlocal x
+        x = 2
+        print("inner:", x)
+    inner()
+    print("outer:", x)
+	outer()
+
+**Q35. What is the global keyword?**
+
+Ans: The global keyword is used to declare a variable inside a function to be global. This means that the variable can be accessed and modified from anywhere in the program, including outside the function in which it was originally defined.
+
+	x = 1
+	def func():
+  	global x
+  	x = 2
+    print("inside func:", x)
+	print("before func:", x)
+	func()
+	print("after func:", x)
+
+
+
+
+
+
 
 	
 	
