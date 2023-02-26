@@ -167,6 +167,36 @@ The **Raise** is another way to that we can use when any exception occure at run
 	except ValueError as val_e:
 		print(val_e)
 		
+**Q22. Identify two methods for specifying actions to be executed at termination time, regardless of whether or not an exception exists.**
+
+Ans: There are two methods else and finally that are used, they both have there own usage. 
+
+The else is used to execute the code that is must be executed when the try block don't raise any exception. The use of the else clause is better than adding additional code to the try clause because it avoids accidentally catching an exception that wasn’t raised by the code being protected by the try
+
+	for arg in sys.argv[1:]:
+		try:
+    	f = open(arg, 'r')
+    except OSError:
+    	print('cannot open', arg)
+    else:
+    	print(arg, 'has', len(f.readlines()), 'lines')
+    	f.close()
+
+The try statement has another optional clause finally which is intended to define clean-up actions that must be executed under all circumstances. The finally clause will execute as the last task before the try statement completes. The finally clause runs whether or not the try statement produces an exception. 
+				
+	def divide(x, y):
+    try:
+			result = x / y
+    except ZeroDivisionError:
+    	print("division by zero!")
+    else:
+    	print("result is", result)
+    finally:
+    	print("executing finally clause")			
+			
+			
+		
+		
 		
  
 	
