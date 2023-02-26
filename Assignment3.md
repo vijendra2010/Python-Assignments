@@ -244,7 +244,7 @@ The above code can handle the exception but it is not that compact
 		
 The above code is more compact and redable and also there is no need of the file.close() here as the with itself ensures proper acquisition and release of resources.		
 
-**Q28. What are *args, ****kwargs?
+**Q28. What are *args, **kwargs?
 
 Ans: Python has *args, which allows us to pass a variable number of non-keyword arguments to a function. Non-keyword here means that the arguments should not be a dictionary (key-value pair), and they can be numbers or strings.
 
@@ -277,6 +277,33 @@ Using Both *args and *kwargs in a Python Function. While doing this, the order o
 	printingData('007', 'agent', firstName='James', lastName='Bond') 
 
 The single and double asterisks that we use are called unpacking operators. Unpacking operators are used to unpack the variables from iterable data types like lists, tuples, and dictionaries. A single asterisk(*) is used on any iterable given by Python. The double asterisk(**) is used to iterate over dictionaries.
+
+**Q29. How can I pass optional or keyword parameters from one function to another?**
+
+Ans: To pass, collect the arguments using the * and ** in the function’s parameter list. Through this, you will get the positional arguments as a tuple and the keyword arguments as a dictionary. Pass these arguments when calling another function by using * and **
+
+**Q30. What are Lambda Functions?**
+
+Ans: Python Lambda Functions are anonymous function means that the function is without a name. Syntax: lambda arguments: expression
+1. This function can have any number of arguments but only one expression, which is evaluated and returned.
+2. One is free to use lambda functions wherever function objects are required.
+3. You need to keep in your knowledge that lambda functions are syntactically restricted to a single expression.
+4. It has various uses in particular fields of programming, besides other types of expressions in functions.
+
+Example of lambda
+
+	str1 = 'vijendra'
+ 	# lambda returns a function object
+	reverse_in_upper = lambda string: string.upper()[::-1]
+	print(reverse_in_upper(str1))
+	
+
+	
+	
+
+	
+	
+
 	
 		
 		
