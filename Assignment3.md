@@ -297,8 +297,11 @@ Example of lambda
 	reverse_in_upper = lambda string: string.upper()[::-1]
 	print(reverse_in_upper(str1))
 	
+**Q31. Explain Inheritance in Python with an example?**
 
-	
+Ans: It is a mechanism that allows you to create a hierarchy of classes that share a set of properties and methods by deriving a class from another class. Inheritance is the capability of one class to derive or inherit the properties from another class. 
+
+Single inheritance: When a child class inherits from only one parent class, it is called single inheritance. We saw an example above. Multiple inheritances: When a child class inherits from multiple parent classes, it is called multiple inheritances. Multilevel inheritance: When we have a child and grandchild relationship. Hierarchical inheritance More than one derived class are created from a single base. Hybrid inheritance: This form combines more than one form of inheritance. Basically, it is a blend of more than one type of inheritance.
 	
 
 	
