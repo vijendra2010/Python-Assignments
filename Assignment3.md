@@ -194,7 +194,25 @@ The try statement has another optional clause finally which is intended to defin
     finally:
     	print("executing finally clause")			
 			
-			
+**Q23. What is the purpose of the try statement?**
+
+Ans: The puspose of try block is to hold the code that is likely to have the chances to have exceptions, and to throw the exception to the catch block to get it handled there.
+
+**Q24. What are the two most popular try statement variations?**
+
+Ans: The try is used with except and sometimes with multiple excepts, apart from this there is a optional methods else and finally that can also be used with the try block.
+
+**Q25. What is the purpose of the raise statement?**
+
+Ans: The raise keyword is used to raise an exception. You can define what kind of error to raise, and the text to print to the user.
+	
+	x = "hello"
+	if not type(x) is int:
+  	raise TypeError("Only integers are allowed")
+		
+		
+
+
 		
 		
 		
