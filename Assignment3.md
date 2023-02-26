@@ -135,5 +135,38 @@ Ans: If we don't handle the ecveptions then the program or system gets crashed i
 
 Ans: If there is any suspicious code in the script that may cause any exception then we put that code inside try-except block or we can also use the variants of try-except like try-except-else or try-finally.
 
+**Q21. Describe two methods for triggering exceptions in your script.**
 
+Ans: To handle exception in python we have two methods.
+**1. Try** - This method catches exceptions raised by the program.
+**2. Raise** - Triggers the exceptions manually using custom exceptions.
+
+The **Try** method is use with except or with except else. The code that are likely to have exception during run time are placed inside the try block and the logic that has to be executed on any exception occurance are kept under except block.
+
+	import sys
+	
+	l = ['a', 1e-15, null]
+	
+	for i int l:
+		try:
+			print(i)
+			res = 1/int(i)
+			break
+		 except:
+      print(“Whew!”, sys.exc_info()[0], “occurred.”)
+      print(“Next input please.”)
+      print()
+	print(“The answer of”, result, “is”, y)		
+
+The **Raise** is another way to that we can use when any exception occure at run time to clearify why the exception has occured.
+
+	try:
+		x = int(input(“Enter a positive integer: “))
+    if x <= 0:
+			raise ValueError(“It is not a positive number!”)
+	except ValueError as val_e:
+		print(val_e)
+		
+		
+ 
 	
