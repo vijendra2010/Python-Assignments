@@ -244,7 +244,7 @@ The above code can handle the exception but it is not that compact
 		
 The above code is more compact and redable and also there is no need of the file.close() here as the with itself ensures proper acquisition and release of resources.		
 
-**Q28. What are *args, **kwargs?**
+**Q28. What are *args, ****kwargs?
 
 Ans: Python has *args, which allows us to pass a variable number of non-keyword arguments to a function. Non-keyword here means that the arguments should not be a dictionary (key-value pair), and they can be numbers or strings.
 
