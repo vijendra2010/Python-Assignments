@@ -244,7 +244,40 @@ The above code can handle the exception but it is not that compact
 		
 The above code is more compact and redable and also there is no need of the file.close() here as the with itself ensures proper acquisition and release of resources.		
 
+**Q28. What are *args, **kwargs?**
 
+Ans: Python has *args, which allows us to pass a variable number of non-keyword arguments to a function. Non-keyword here means that the arguments should not be a dictionary (key-value pair), and they can be numbers or strings.
+
+When an asterisk(*) is passed before the variable name in a Python function, then Python understands that here the number of arguments is not fixed. Python makes a tuple of these arguments with the name we use after the asterisk(*) and makes this variable available to us inside the function. This asterisk(*) is called an “unpacking operator”. 
+
+	def multiplyNumbers(*numbers):
+    product=1
+    for n in numbers:
+        product*=n
+    return product
+	print("product:",multiplyNumbers(4,4,4,4,4,4)) 
+
+*args enable us to pass the variable number of non-keyword arguments to functions, but we cannot use this to pass keyword arguments. Keyword arguments mean that they contain a key-value pair, like a Python dictionary. **kwargs allows us to pass any number of keyword arguments. Python will consider any variable name with two asterisks(**) before it as a keyword argument.
+
+	def makeSentence(**words):
+    sentence=''
+    for word in words.values():
+        sentence+=word
+    return sentence
+ 	print('Sentence:', makeSentence(a='Kwargs ',b='are ', c='awesome!'))
+	
+Using Both *args and *kwargs in a Python Function. While doing this, the order of the arguments matter, *args has to come before *kwargs. So if you are using standard arguments along with *args and **kwargs, then you have to follow this order- Standard Arguments, *args, **kwargs.
+
+	def printingData(codeName, *args, **kwargs):
+    print("I am ", codeName)
+    for arg in args:
+        print("I am arg: ", arg)
+    for keyWord in kwargs.items():
+        print("I am kwarg: ", keyWord) 
+	printingData('007', 'agent', firstName='James', lastName='Bond') 
+
+The single and double asterisks that we use are called unpacking operators. Unpacking operators are used to unpack the variables from iterable data types like lists, tuples, and dictionaries. A single asterisk(*) is used on any iterable given by Python. The double asterisk(**) is used to iterate over dictionaries.
+	
 		
 		
 		
